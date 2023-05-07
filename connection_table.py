@@ -52,7 +52,7 @@ print("insert in sales")
 
 
 
-
+-------------------------Q9--------------------------------------------
 f="SELECT *FROM goods WHERE product_name = 'Wooden Chair' AND manufacture_date < '2023-05-01'"
 cur.execute(f)
 display=cur.fetchall()
@@ -61,9 +61,7 @@ for x in display:
 
 
 
-
-
-
+-----------------------------Q8-------------------------------------
 x="UPDATE manufacture SET quantity = quantity - (SELECT SUM(quantity) FROM purchase WHERE color = 'Red' AND store_name = 'MyKids')WHERE color = 'Red'"
 cur.execute(x)
 mydb.commit()
@@ -72,7 +70,7 @@ print("commited successfully")
 
 
 
-
+--------------------------Q10-------------------------------------
 f="select profit_margin from sale where product_name='wooden_table' and store_name='MyCare' and company='SS Export'"
 cur.execute(f)
 display=cur.fetchall()
@@ -80,6 +78,8 @@ for x in display:
     print(x)
 
 
+    
+---------------------Q7-----------------------------------------    
 x='delete from purchase where product_name="Shirt" and purchase_date="2023-04-02" and store_name="ORay"'
 cur.execute(x)
 mydb.commit()
